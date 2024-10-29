@@ -1,68 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
-	<script type="text/javascript">
-		var greetingShown = false;
-		
-		function toggleGreeting() {
-			console.log("toggleGreeting");
-			if (greetingShown) {
-				greetingShown = false;
-			} else {
-				greetingShown = true;
-				
-			}
-			var greetingObj = $( "#greeting" );
+	<script src="js/utility.js"></script>
+	
+	<script src="js/jquery-3.7.1.min.js"></script>
+	
+	
+	
+	<script>
+		window.addEventListener('load',function() {
+			console.log("window loaded");
+			hasJQuery();
 			
-			
-			
-			//greetingObj.show();
-			greetingObj.slideToggle(500);
-		}
-		
-		
-		
-		$( document ).ready(function() {
-			console.log( "ready!" );
-			
-			var greetingObj = $( "#greeting" );
-			//greetingObj.show();
-			
-			
-			//$( "#introh1" ).slideUp(500);
-			//$( "#introh1" ).slideDown(500);
 			
 		});
 		
-	
+		
 	</script>
+
+
+
+	<link rel="stylesheet" href="css/default.css">
+	<style>
 		
-	<style type="text/css">
-		#greeting {
-			padding: 50px;
-			background: lightblue;
-			font-size: 24pt;
+		body {
+			font-family: sans-serif;
 			
 			
 		}
 		
+		.pagetitle {
+			font-size:36pt;
+			font-family:sans-serif;
+			background-color: var(--pagetitlebackground);
+			color: var(--pagetitlecolor);
+			line-height: 100px;
+			height: 100px;
+			padding-left: 20px;
+		}
 		
-		#cmdShow {
-			font-size: 36pt;
-			
-			
+		p {
+			padding-left:	10px;
+			padding-right:	10px;
+			text-align: justify;
 			
 		}
+		
+		
 	</style>
-	
+		
+	<title>Frank Suarez</title>
+	<div class="pagetitle">Frank Suarez</div>
+	<h1>Introduction</h1>
+	<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+	<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+	<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+	<h1>Projects</h1>
+	<ul id="projectlist">
+		<li>Project 1</li>
+	</ul>
 </head>
 <body>
-	<button id="cmdShow" name="cmdShow" onclick="toggleGreeting()" value="Show Greeting">Show Greeting</button>
-	
-	<div style="display: none" id="greeting">Hi Amanda!</div>
 	
 	
 	
+	
+
 </body>
 </html>
