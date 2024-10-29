@@ -1,5 +1,60 @@
+<!DOCTYPE html>
 <html>
+<head>
+	<script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+	<script type="text/javascript">
+		var greetingShown = false;
+		
+		function toggleGreeting() {
+			console.log("toggleGreeting");
+			if (greetingShown) {
+				greetingShown = false;
+			} else {
+				greetingShown = true;
+				
+			}
+			var greetingObj = $( "#greeting" );
+			
+			
+			
+			//greetingObj.show();
+			greetingObj.slideToggle(500);
+		}
+		
+		
+		
+		$( document ).ready(function() {
+			console.log( "ready!" );
+			
+			var greetingObj = $( "#greeting" );
+			//greetingObj.show();
+			
+			
+			//$( "#introh1" ).slideUp(500);
+			//$( "#introh1" ).slideDown(500);
+			
+		});
+		
+	
+	</script>
+		
+	<style type="text/css">
+		#greeting {
+			padding: 50px;
+			background: lightblue;
+
+			
+			
+		}
+	</style>
+	
+</head>
 <body>
-	test
+	<button id="cmdShow" name="cmdShow" onclick="toggleGreeting()" value="Show Greeting">Show Greeting</button>
+	
+	<div style="display: none" id="greeting">Hi Amanda!</div>
+	
+	
+	
 </body>
 </html>
