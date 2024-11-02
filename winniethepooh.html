@@ -2,6 +2,8 @@
 <html>
 <head>
 	<script>
+		var current_image = 0;
+		
 		var image_directory = "winniethepoohimages"
 		var image_list = [
 			'winnie-the-pooh-1.webp',
@@ -16,7 +18,14 @@
 		
 		
 		function image_onclick() {
-			alert('image was');	
+			// update counter
+			current_image++;
+			// change image based on counter
+			var mainimage_elem = document.getElementById('mainimage');
+			
+			mainimage_elem.setAttribute('src',image_directory+'/'+image_list[current_image]);
+			
+			
 		}
 		
 		function create_main_image() {
