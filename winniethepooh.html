@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Random Winnie-the-Pooh Character</title>
+	
+	
 	<script>
 		var current_image = 0;
 		
@@ -23,7 +26,7 @@
 			// change image based on counter
 			var mainimage_elem = document.getElementById('mainimage');
 			
-			mainimage_elem.setAttribute('src',image_directory+'/'+image_list[current_image]);
+			mainimage_elem.setAttribute('src',image_directory+'/'+image_list[get_random_0_to_max(image_list.length-1)]);
 			
 			
 		}
@@ -47,21 +50,45 @@
 			
 		}
 		
+		
+		function get_random_0_to_max(max) {
+			return Math.floor(Math.random()*(max+1));
+		}
+		
 	</script>
 		
 		
 	<style>
+		#pagecontainer {
+			box-sizing: border-box;
+			border-radius:25px;
+			border: 5px solid #ffdaa1;
+			
+			background: #fff19c;
+			padding-top:10px;
+			padding-bottom:20px;
+			
+			
+		}
+		
 		#mainimage {
 			height: 300px;
 			
 			
 		}
+		
+		#pagetitle {
+			font-size: 36pt;
+			font-family: cursive;
+			
+		}
+		
 	</style>
 </head>
 <body onload="page_loaded()">
 
 <div id="pagecontainer" style="width:100%;text-align: center">
-<h1>Random Winnie-the-Pooh Character</h1>
+<h1 id="pagetitle">Random<br />Winnie-the-Pooh<br />Character</h1>
 
 <!-- image goes here -->
 
