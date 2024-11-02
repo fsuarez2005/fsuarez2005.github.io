@@ -16,36 +16,45 @@
 		
 		
 		function image_onclick() {
-			alert('image was clicked.');
+			alert('image was');	
+		}
+		
+		function create_main_image() {
+			var mainimage = document.createElement('img');
+			
+			mainimage.setAttribute('src',image_directory+'/'+image_list[0]);
+			mainimage.setAttribute('id','mainimage');
+			mainimage.addEventListener('click',image_onclick);
+			
+			var pagecontainer_elem = document.getElementById('pagecontainer');
+			pagecontainer_elem.appendChild(mainimage);
+			
+		}
+		
+		
+		function page_loaded() {
+			create_main_image();
 			
 			
 		}
+		
 	</script>
 		
 		
 	<style>
 		#mainimage {
-			height: 200px;
+			height: 300px;
 			
 			
 		}
 	</style>
 </head>
-<body>
+<body onload="page_loaded()">
 
-<div style="width:100%;text-align: center">
+<div id="pagecontainer" style="width:100%;text-align: center">
 <h1>Random Winnie-the-Pooh Character</h1>
 
-
-<script>
-	// display image
-	// <img onclick="image_onclick()" style="height:300px" src="winniethepoohimages/winnie-the-pooh-1.webp" />
-
-	
-	document.write('<img onclick="image_onclick()" id="mainimage" src="'+image_directory+'/'+image_list[0]+'" />');
-	
-	
-</script>
+<!-- image goes here -->
 
 
 
