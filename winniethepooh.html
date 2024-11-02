@@ -2,19 +2,53 @@
 <html>
 <head>
 	<script>
+		var image_directory = "winniethepoohimages"
+		var image_list = [
+			'winnie-the-pooh-1.webp',
+			'Piglet_EHShepard.jpg',
+			'Rabbit_1926_Winnie-the-Pooh_book.jpg',
+			'TiggerDisney.jpg',
+			'Winnie-the-Pooh_118_(cropped).png',
+			'Winnie-the-Pooh_166-1.png',
+			'Winniethepooh.png',
+			'Xmas_roo2.gif'
+		];
+		
+		
 		function image_onclick() {
 			alert('image was clicked.');
 			
 			
 		}
 	</script>
+		
+		
+	<style>
+		#mainimage {
+			height: 200px;
+			
+			
+		}
+	</style>
 </head>
 <body>
 
 <div style="width:100%;text-align: center">
 <h1>Random Winnie-the-Pooh Character</h1>
 
-<img onclick="image_onclick()" style="height:300px" src="winniethepoohimages/winnie-the-pooh-1.webp" />
+
+<script>
+	// display image
+	// <img onclick="image_onclick()" style="height:300px" src="winniethepoohimages/winnie-the-pooh-1.webp" />
+
+	
+	document.write('<img onclick="image_onclick()" id="mainimage" src="'+image_directory+'/'+image_list[0]+'" />');
+	
+	
+</script>
+
+
+
 </div>
 
 
